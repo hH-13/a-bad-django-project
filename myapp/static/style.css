@@ -1,0 +1,49 @@
+.hbar1 {
+display: inline;
+margin: 15px;
+}
+
+h1{
+    font-style: italic;
+    font-size: medium;
+    background-color: cadetblue;
+}
+
+*{
+    text-decoration-color: black;
+    font-size: medium;
+    align-content: center;
+
+}
+
+body{
+    background-color: white;
+}
+
+nav {
+    text-align: center;
+    /*background-color: darkgray;*/
+    /*color: #fff;*/
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: darkkhaki;
+}

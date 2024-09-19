@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+<strong>{{ selected_type }}</strong>
+{% if items %}
+    {% for item in items  %}
+        <li>{{item}}</li>   
+    {% endfor %}
+{% else %}
+    <br>
+    <strong> No items in this Category! </strong>
+{% endif %}
+<p><a href="{% url 'index'%}">Index Page</a></p>
+{% endblock %}

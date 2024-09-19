@@ -1,0 +1,39 @@
+{% extends 'myapp/base.html' %} 
+{% load static %}
+{% block body_block %}
+{#<div>#}
+{#    <a href="{% url 'about' %}">About</a>#}
+{#    <a href="{% url 'itemsearch' %}">Search</a>#}
+{#    <!-- Add more links as needed -->#}
+{#</div>#}
+
+
+<div>
+    <h2>Featured Items</h2>
+    <div>
+        <img src="{% static 'images/Cookies.jpg' %}" alt="Cookies" style="max-width: 150px; max-height: 150px;">
+        <p>Description: Cookies</p>
+    </div>
+    <div>
+        <img src="{% static 'images/Handwash.jpg' %}" alt="Handwash" style="max-width: 150px; max-height: 150px;">
+        <p>Description: Handwash</p>
+    </div>
+
+</div>
+
+    {% if type_list %}
+    <h2>List of Types:</h2>
+    <ol>
+        {% for type in type_list %}
+            <li><a href="{% url 'detail' type.id %}">{{ type.name }}</a></li>
+        {% endfor %}
+    </ol>
+    {% else %}
+        <strong>None of the types is available</strong>
+    {% endif %}
+
+<p><a href="http://127.0.0.1:8000//about">About Page(Hardcoded)</a></p>
+<p><a href="{% url 'about' %}">About Page(Namespace)</a></p>
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+    <title> Online Grocery Store - {% block title %} Welcome! {% endblock %}</title>
+</head>
+<body>
+<nav>
+        <ul>
+            <li><a href="{% url 'index'%}">Home</a></li>
+            <li><a href="{% url 'about'%}">About</a></li>
+            <li><a href="{% url 'items'%}">Items Page</a></li>
+            <li><a href="{% url 'placeorder'%}">Place Order</a></li>
+            <li><a href="{% url 'itemsearch'%}">Item Search</a></li>
+            <li><a href="{% url 'team'%}">Developed By</a></li>
+        </ul>
+    </nav>
+<div>
+    <h1>{% block myhdg %} Welcome to our online grocery store {% endblock %}</h1>
+    {% block body_block %}*** {% endblock %}
+</div>
+</body>
+</html>

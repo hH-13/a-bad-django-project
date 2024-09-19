@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+  
+    <h1>Order Item Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <button type="submit">Filter Items</button>
+    </form>
+     {% if price %}
+    <p>Price: {{ price }}</p>
+    {% endif %}
+
+{% endblock %}

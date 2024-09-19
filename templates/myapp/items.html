@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    {% for item in itemlist %}
+    <p>Name: {{ item.name }}</p>
+    <p>Price: ${{ item.price }}</p>
+    <p>Available: {% if item.available %} Yes {% else %} No {% endif %}</p>
+    <a href="{% url 'item_detail' item.id %}">View Details</a>
+    <hr>
+{% endfor %}
+    <li class="hbar1"><a href = "{% url 'placeorder'%}"> Click here to Placeorder </a><br/></li>
+{% endblock %}

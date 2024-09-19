@@ -1,0 +1,5 @@
+.idea
+.venv
+.denv
+*/__pycache__/*
+/myapp/migrations/__pycache__/*
